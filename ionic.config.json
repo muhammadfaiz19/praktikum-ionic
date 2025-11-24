@@ -1,0 +1,7 @@
+{
+  "name": "praktikum",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
