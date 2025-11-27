@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Bilangan Prima (1-49)</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-container">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bilangan Prima dari 1 hingga 49</ion-card-title>
+      <ion-card-subtitle>NIM: 220511139 → 39 + 10 = 49</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="result-box">
+        <p><strong>{{ primaList.join(', ') }}</strong></p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

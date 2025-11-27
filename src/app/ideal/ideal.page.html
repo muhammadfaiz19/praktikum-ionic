@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Berat Badan Ideal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-container">
+  <ion-card>
+    <ion-item>
+      <ion-label position="stacked">Tinggi Badan (cm)</ion-label>
+      <ion-input type="number" [(ngModel)]="tinggi"></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <ion-radio-group [(ngModel)]="jenisKelamin">
+        <ion-item>
+          <ion-label>Pria</ion-label>
+          <ion-radio value="pria"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Wanita</ion-label>
+          <ion-radio value="wanita"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-button expand="block" (click)="hitungIdeal()">Hitung</ion-button>
+
+    <div class="result-box" *ngIf="beratIdeal !== null">
+      <p>Berat Badan Ideal: <strong>{{ beratIdeal }} kg</strong></p>
+    </div>
+  </ion-card>
+</ion-content>

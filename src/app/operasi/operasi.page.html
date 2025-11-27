@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Operasi Hitung</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-container">
+  <ion-card>
+    <ion-item>
+      <ion-label position="stacked">Bilangan Pertama</ion-label>
+      <ion-input type="number" [(ngModel)]="bil1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Bilangan Kedua</ion-label>
+      <ion-input type="number" [(ngModel)]="bil2"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="hitung()">Hitung</ion-button>
+
+    <div class="result-box" [hidden]="hasil === null">
+      <p>Penjumlahan: {{ hasil.tambah }}</p>
+      <p>Pengurangan: {{ hasil.kurang }}</p>
+      <p>Perkalian: {{ hasil.kali }}</p>
+      <p>Pembagian: {{ hasil.bagi }}</p>
+    </div>
+  </ion-card>
+</ion-content>
