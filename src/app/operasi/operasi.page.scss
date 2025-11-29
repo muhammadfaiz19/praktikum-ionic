@@ -1,4 +1,9 @@
-.page-container { padding: 16px; }
-ion-card { padding: 16px; border-radius: 12px; }
-ion-button { margin-top: 16px; }
-.result-box { margin-top: 20px; padding: 12px; background: #f1f1f1; border-radius: 8px; }
+.page-container { padding: 16px; }                                             // Memberi jarak dalam 16px di seluruh konten halaman
+ion-card { padding: 16px; border-radius: 12px; }                               // Memberi padding dan sudut membulat pada kartu
+ion-button { margin-top: 16px; }                                               // Jarak atas tombol agar tidak terlalu rapat
+.result-box {                                                                  // Styling kotak hasil perhitungan
+  margin-top: 20px;                                                            // Jarak atas dari elemen sebelumnya
+  padding: 12px;                                                               // Jarak dalam kotak
+  background: #f1f1f1;                                                         // Warna latar belakang abu-abu muda
+  border-radius: 8px;                                                          // Sudut membulat
+}

@@ -11,26 +11,28 @@
   <ion-card>
     <ion-item>
       <ion-label position="stacked">Tinggi Badan (cm)</ion-label>
-      <ion-input type="number" [(ngModel)]="tinggi"></ion-input>
+      <ion-input type="number" [(ngModel)]="tinggi"></ion-input>                <!-- Input tinggi badan -->
     </ion-item>
 
     <ion-list>
-      <ion-radio-group [(ngModel)]="jenisKelamin">
+      <ion-radio-group [(ngModel)]="jenisKelamin">                              <!-- Radio group dengan two-way binding -->
         <ion-item>
           <ion-label>Pria</ion-label>
-          <ion-radio value="pria"></ion-radio>
+          <ion-radio value="pria"></ion-radio>                                  <!-- Pilihan pria -->
         </ion-item>
         <ion-item>
           <ion-label>Wanita</ion-label>
-          <ion-radio value="wanita"></ion-radio>
+          <ion-radio value="wanita"></ion-radio>                                <!-- Pilihan wanita -->
         </ion-item>
       </ion-radio-group>
     </ion-list>
 
-    <ion-button expand="block" (click)="hitungIdeal()">Hitung</ion-button>
+    <ion-button expand="block" (click)="hitungIdeal()">Hitung</ion-button>     <!-- Tombol hitung -->
 
-    <div class="result-box" *ngIf="beratIdeal !== null">
+    <div class="result-box" *ngIf="beratIdeal !== null">                        <!-- Hanya tampilkan hasil jika sudah dihitung -->
       <p>Berat Badan Ideal: <strong>{{ beratIdeal }} kg</strong></p>
     </div>
   </ion-card>
 </ion-content>
+
+<app-footer></app-footer>

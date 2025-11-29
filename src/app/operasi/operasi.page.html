@@ -1,31 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
+<ion-header [translucent]="true">                                              <!-- Header dengan efek transparan agar status bar terlihat -->
+  <ion-toolbar color="primary">                                                <!-- Toolbar utama dengan warna tema primary -->
+    <ion-buttons slot="start">                                                 <!-- Area tombol di sebelah kiri header -->
+      <ion-back-button defaultHref="/home"></ion-back-button>                  <!-- Tombol kembali otomatis ke halaman home -->
     </ion-buttons>
-    <ion-title>Operasi Hitung</ion-title>
+    <ion-title>Operasi Hitung</ion-title>                                      <!-- Judul halaman -->
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="page-container">
-  <ion-card>
-    <ion-item>
-      <ion-label position="stacked">Bilangan Pertama</ion-label>
-      <ion-input type="number" [(ngModel)]="bil1"></ion-input>
+<ion-content class="page-container">                                           <!-- Konten utama halaman -->
+  <ion-card>                                                                   <!-- Kartu sebagai wadah form -->
+    <ion-item>                                                                 <!-- Input bilangan pertama -->
+      <ion-label position="stacked">Bilangan Pertama</ion-label>               <!-- Label di atas input (stacked) -->
+      <ion-input type="number" [(ngModel)]="bil1"></ion-input>                 <!-- Input angka, two-way binding ke properti bil1 -->
     </ion-item>
 
-    <ion-item>
+    <ion-item>                                                                 <!-- Input bilangan kedua -->
       <ion-label position="stacked">Bilangan Kedua</ion-label>
-      <ion-input type="number" [(ngModel)]="bil2"></ion-input>
+      <ion-input type="number" [(ngModel)]="bil2"></ion-input>                 <!-- Two-way binding ke properti bil2 -->
     </ion-item>
 
-    <ion-button expand="block" (click)="hitung()">Hitung</ion-button>
+    <ion-button expand="block" (click)="hitung()">Hitung</ion-button>          <!-- Tombol lebar penuh, panggil method hitung() saat diklik -->
 
-    <div class="result-box" [hidden]="hasil === null">
-      <p>Penjumlahan: {{ hasil.tambah }}</p>
-      <p>Pengurangan: {{ hasil.kurang }}</p>
-      <p>Perkalian: {{ hasil.kali }}</p>
-      <p>Pembagian: {{ hasil.bagi }}</p>
+    <div class="result-box" [hidden]="hasil === null">                         <!-- Kotak hasil, disembunyikan jika hasil masih null -->
+      <p>Penjumlahan: {{ hasil.tambah }}</p>                                   <!-- Tampilkan hasil penjumlahan -->
+      <p>Pengurangan: {{ hasil.kurang }}</p>                                   <!-- Tampilkan hasil pengurangan -->
+      <p>Perkalian: {{ hasil.kali }}</p>                                       <!-- Tampilkan hasil perkalian -->
+      <p>Pembagian: {{ hasil.bagi }}</p>                                       <!-- Tampilkan hasil pembagian (bisa string jika bagi nol) -->
     </div>
   </ion-card>
 </ion-content>
+
+<app-footer></app-footer>

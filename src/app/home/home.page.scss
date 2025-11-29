@@ -1,13 +1,13 @@
-ion-list {
-  margin: 20px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: var(--ion-card-background);
+ion-list {                                                                     // Styling untuk komponen <ion-list>
+  margin: 20px;                                                                // Memberi jarak luar 20px di semua sisi
+  border-radius: 16px;                                                         // Membuat sudut list melengkung
+  overflow: hidden;                                                            // Agar border-radius berfungsi dengan baik pada child item
+  background: var(--ion-card-background);                                      // Menggunakan warna background kartu Ionic
 }
 
-ion-item {
-  --background: transparent;
-  --color: #e0e0e0;
-  font-size: 17px;
-  font-weight: 500;
+ion-item {                                                                     // Styling untuk setiap <ion-item> di dalam list
+  --background: transparent;                                                   // Background item menjadi transparan
+  --color: #e0e0e0;                                                            // Warna teks menjadi abu-abu muda
+  font-size: 17px;                                                             // Ukuran font
+  font-weight: 500;                                                            // Ketebalan font sedang
 }

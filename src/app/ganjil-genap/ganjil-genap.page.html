@@ -1,23 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
+    <ion-buttons slot="start">                                                 <!-- Tombol back di sebelah kiri -->
+      <ion-back-button defaultHref="/home"></ion-back-button>                  <!-- Kembali ke halaman home -->
     </ion-buttons>
     <ion-title>Ganjil / Genap</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="page-container">
-  <ion-card>
+  <ion-card>                                                                   <!-- Kartu utama -->
     <ion-item>
-      <ion-label position="stacked">Masukkan Bilangan</ion-label>
-      <ion-input type="number" [(ngModel)]="angka"></ion-input>
+      <ion-label position="stacked">Masukkan Bilangan</ion-label>              <!-- Label di atas input -->
+      <ion-input type="number" [(ngModel)]="angka"></ion-input>                <!-- Input angka dengan two-way binding ke properti "angka" -->
     </ion-item>
 
-    <ion-button expand="block" (click)="cek()">Cek</ion-button>
+    <ion-button expand="block" (click)="cek()">Cek</ion-button>                <!-- Tombol lebar penuh yang memanggil method cek() -->
 
-    <div class="result-box" *ngIf="hasil">
-      <p>Bilangan <strong>{{ angka }}</strong> adalah <strong>{{ hasil }}</strong></p>
+    <div class="result-box" *ngIf="hasil">                                      <!-- Hanya muncul jika properti hasil tidak kosong -->
+      <p>Bilangan <strong>{{ angka }}</strong> adalah <strong>{{ hasil }}</strong></p> <!-- Menampilkan hasil -->
     </div>
   </ion-card>
 </ion-content>
+
+<app-footer></app-footer>
